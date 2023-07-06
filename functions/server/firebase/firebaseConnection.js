@@ -1,10 +1,9 @@
 const firebaseAdmin = require("firebase-admin");
 const {initializeApp} = require("firebase-admin/app");
-const serviceAccount = require("./SA-veloci-tech.json");
 
 
 if (process.env.ENVIRONMENT === 'Local') {
-    const serviceAccount =  require("./SA-veloci-tech.json");
+    const serviceAccount =  require("../../SA-sandbox-veloci.json");
     initializeApp({
         credential: firebaseAdmin.credential.cert(serviceAccount)
     });
